@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    <script>
+        function cal() 
+        {
+            體重 = document.getElementById("體重").value;
+            身高 = document.getElementById("身高").value;
+            BMI =  體重/((身高/100)*(身高/100));
+            document.getElementById("BMI").value = BMI;
+        }
+    </script>
+
+    <title>HW10-BMI計算</title>
+    <style> 
+     h1{
+            background-color: palevioletred;
+            font-weight: bold;
+            font-family: "標楷體";
+            font-size: xx-large;
+            border-style: solid;
+            border-radius: 10px;
+        }      
+     h5{
+            background-color: steelblue;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            border-style: double;
+            border-radius: initial;
+            padding: 5px;
+        }   
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; padding: 15px;">BMI計算網頁</h1>
+    <div style = "text-align: center;">
+        <p>BMI公式 = 
+            <strong> 體重(公斤) / (身高x身高)(公尺)</strong> 
+            <br>
+        </p>
+    </div>
+    <br>
+ <header>
+     <div class = "container-fluid">
+         <div class= "text-center border-size:larger navbar-brand">這是BMI測試系統</div>
+     </div>
+ </header>
+ <br>
+
+ <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://depart.femh.org.tw/dietary/3OPD/BMI.htm">參考來源</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"data-bs-target="#navbarNav"aria-controls="navbarNav"aria-expanded="false"aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+       <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="https://github.com/HSU-C/HW08/blob/839e8246aa58e3fdcb3d07202104bb5285218720/HW08.html">HW08</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/HSU-C/HW09/blob/8a2d39032c3028b2ce1e7a5f1258ab19d3d670a6/HW09.html">HW09</a>
+            </li>
+        </ul>
+       </div>
+    </div> 
+  </nav>
+  <br>
+
+ <main>
+     <article>
+         <div class="container-fluid px-5">
+             <div class="row g-5">
+                <div class="col-sm-6">
+                   <span style="border: 3px paleturquoise solid; padding: 5px; background-color: pink;" >
+                    <strong>第一個card</strong>
+                   </span>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">第一種BMI作法</h5>
+                            <p class="card-text">
+                                <form oninput="result.value=parseInt(a.value)/((parseInt(b.value)/100)*(parseInt(b.value)/100))"> 
+                                    <p>體重 : <input type="number" id="a" name="體重" value="" > Kg </p>
+                                    <p>身高 : <input type="number" id="b" name="身高" value="" > Cm </p> 
+                                    <p>BMI值 : <output name="result" for="a b"> </output> </p>
+                                </form>
+                            </p> 
+                        </div>
+                    </div>
+                 </div>
+
+                <div class="col-sm-6">
+                    <span style="border:3px paleturquoise solid; padding: 5px; background-color: pink;" >
+                        <strong>第二個card</strong>
+                    </span>
+                     <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">第二種BMI作法</h5>
+                            <p class="card-text">
+                                    <p>體重 : <input type="number" id="體重" > Kg </p>
+                                    <p>身高 : <input type="number" id="身高" > Cm </p> 
+                                    <p>執行 : <button onclick="cal()">計算</button></p>
+                                    <p>BMI值 : <output> <input type="text" id="BMI"> </output> </p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+         </div>
+     </article>
+ </main>
+<br>
+ <footer>
+     <p class="text-end text-muted">
+         Updated on 2021/06/16 by Hsin
+     </p>
+ </footer>
+    
+ </body>
+</html>
